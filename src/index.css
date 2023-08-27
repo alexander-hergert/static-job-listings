@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*own tailwind classes go here */
+@layer components {
+  .classExample {
+    @apply py-1;
+  }
+}
