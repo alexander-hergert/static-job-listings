@@ -1,10 +1,14 @@
 import React from "react";
 import Filter from "./Filter";
+import { useGlobalContext } from "../../context";
 
 const Filters = () => {
+  const { filter } = useGlobalContext();
   return (
     <section>
-      <Filter />
+      {filter.map((item) => (
+        <Filter key={item.id} {...item}/>
+      ))}
     </section>
   );
 };

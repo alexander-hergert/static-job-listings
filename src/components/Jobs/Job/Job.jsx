@@ -2,11 +2,11 @@ import React from "react";
 import Infos from "./Infos";
 import FilterTabs from "./FilterTabs";
 
-const Job = () => {
+const Job = ({ job }) => {
   return (
-    <article>
-      <Infos />
-      <FilterTabs />
+    <article className="flex justify-between items-center">
+      <Infos job={job} />
+      <FilterTabs job={job} />
     </article>
   );
 };
