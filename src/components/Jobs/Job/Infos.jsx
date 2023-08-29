@@ -20,7 +20,7 @@ const Infos = ({ job }) => {
             </span>
           )}
         </h3>
-        <h3 className="font-bold my-3">{job.position}</h3>
+        <h3 className="font-bold my-3 hover:text-primary cursor-pointer">{job.position}</h3>
         <p className="text-neutral-dark mb-2">{`${job.postedAt} • ${job.contract} • ${job.location}`}</p>
       </div>
     </div>

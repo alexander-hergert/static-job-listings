@@ -12,16 +12,18 @@ const Filter = ({ item }) => {
   };
 
   return (
-    <div className="flex mr-2 mb-2">
+    <div className="flex mr-4 mb-2">
       <h3
         ref={filter}
-        className="bg-neutral-filter-tablets text-primary p-1.5 rounded-l-md"
+        className="bg-neutral-filter-tablets text-primary p-1.5 pb-1 
+        rounded-l-md"
       >
         {item}
       </h3>
       <button
         onClick={handleClick}
-        className="bg-primary text-white p-1.5 px-2 rounded-r-md"
+        className="bg-primary text-white p-1.5 px-2 pb-1 
+        rounded-r-md hover:bg-neutral-very-dark"
       >
         X
       </button>

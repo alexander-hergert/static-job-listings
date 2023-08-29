@@ -21,13 +21,15 @@ const FilterTabs = ({ job }) => {
     <div className="mt-2 flex flex-wrap">
       <button
         onClick={() => handleFilter(role)}
-        className="mr-4 mb-2 text-primary p-1 pt-1.5 px-2 bg-neutral-filter-tablets rounded-lg"
+        className="mr-4 mb-2 text-primary p-1 pt-1.5 px-2
+         bg-neutral-filter-tablets rounded-lg hover:bg-primary hover:text-white"
       >
         {role}
       </button>
       <button
         onClick={() => handleFilter(level)}
-        className="mr-4 mb-2 text-primary p-1 pt-1.5 px-2 bg-neutral-filter-tablets rounded-lg"
+        className="mr-4 mb-2 text-primary p-1 pt-1.5 px-2
+         bg-neutral-filter-tablets rounded-lg hover:bg-primary hover:text-white"
       >
         {level}
       </button>
@@ -35,7 +37,8 @@ const FilterTabs = ({ job }) => {
         <button
           onClick={() => handleFilter(language)}
           key={language}
-          className="mr-4 mb-2 text-primary p-1 pt-1.5 px-2 bg-neutral-filter-tablets rounded-lg"
+          className="mr-4 mb-2 text-primary p-1 pt-1.5 px-2
+           bg-neutral-filter-tablets rounded-lg hover:bg-primary hover:text-white"
         >
           {language}
         </button>
@@ -44,7 +47,8 @@ const FilterTabs = ({ job }) => {
         <button
           onClick={() => handleFilter(tool)}
           key={tool}
-          className="mr-4 mb-2 text-primary p-1 pt-1.5 px-2 bg-neutral-filter-tablets rounded-lg"
+          className="mr-4 mb-2 text-primary p-1 pt-1.5 px-2
+           bg-neutral-filter-tablets rounded-lg hover:bg-primary hover:text-white"
         >
           {tool}
         </button>
