@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useGlobalContext } from "../../context";
 
-const Filter = () => {
+const Filter = ({ item }) => {
+  const { filters, setFilters } = useGlobalContext();
+  const filter = useRef();
+
+  const handleClick = () => {
+    const filterTherm = filter.current.textContent;
+    const newFilter = filters.filter((item) => item !== filterTherm);
+    setFilters(newFilter);
+  };
+
   return (
-    <div>
-      <h3></h3>
-      <button>X</button>
+    <div className="flex mr-2 mb-2">
+      <h3
+        ref={filter}
+        className="bg-neutral-filter-tablets text-primary p-1.5 rounded-l-md"
+      >
+        {item}
+      </h3>
+      <button
+        onClick={handleClick}
+        className="bg-primary text-white p-1.5 px-2 rounded-r-md"
+      >
+        X
+      </button>
     </div>
   );
 };

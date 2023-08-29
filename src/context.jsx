@@ -1,15 +1,21 @@
 import { useContext, createContext, useState } from "react";
 
+
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-  const [filter, setFilter] = useState([]);
+  const [filters, setFilters] = useState([]);
+  const [filteredJobs, setFilteredJobs] = useState(null);
+
 
   return (
     <AppContext.Provider
       value={{
-        filter,
-        setFilter,
+        filters,
+        setFilters,
+        filteredJobs,
+        setFilteredJobs,
+
       }}
     >
       {children}
