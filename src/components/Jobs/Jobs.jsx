@@ -7,7 +7,7 @@ import { useGlobalContext } from "../../context";
 const Jobs = () => {
   const { filters } = useGlobalContext();
   //Use the useQuery hook to execute the query
-  const url = "src/data.json";
+  const url = "/data.json";
   const { data, isLoading, error } = useQuery("jobs", () => fetchData(url));
 
   if (isLoading) {
@@ -38,13 +38,13 @@ const Jobs = () => {
   });
 
   return filters.length < 1 ? (
-    <section className="w-10/12 m-auto md:w-6/12">
+    <section className="w-10/12 m-auto md:w-8/12">
       {data?.map((job) => {
         return <Job key={job.id} job={job} />;
       })}
     </section>
   ) : (
-    <section className="w-10/12 m-auto -mt-6 md:w-6/12">
+    <section className="w-10/12 m-auto -mt-6 md:w-8/12">
       {filteredJobs?.map((job) => {
         return <Job key={job.id} job={job} />;
       })}
