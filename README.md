@@ -45,7 +45,6 @@ To add a filter, the user needs to click on the tablets on the right side of the
 
 Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
 
-
 ## My process
 
 - Plan the project structure
@@ -56,17 +55,21 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 - Fix bugs and accessibility issues and responsiveness
 - Add tests to components to test behavior Unit and Integration tests
 
-
 ### Built with
 
 - React
 - Tailwind-CSS
-- a little React-Query
+- A little React-Query for fetching
 - React Testing Library and Jest
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
 - Setup and use Tailwind-CSS
 - Setup and use React Testing Library and Jest
+
+### Run Tests
+
+- You can run the tests with command "yarn test" in the terminal of the working directory (install yarn: "npm install --global yarn")
+
+### Setup Vite RTL and jest Tests
+https://zaferayan.medium.com/how-to-setup-jest-and-react-testing-library-in-vite-project-2600f2d04bdd

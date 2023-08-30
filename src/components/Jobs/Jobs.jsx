@@ -3,6 +3,7 @@ import Job from "./Job/Job";
 import { useQuery } from "react-query";
 import { fetchData } from "../../utility";
 import { useGlobalContext } from "../../context";
+import Loader from "../Loader";
 
 const Jobs = () => {
   const { filters } = useGlobalContext();
@@ -11,13 +12,18 @@ const Jobs = () => {
   const { data, isLoading, error } = useQuery("jobs", () => fetchData(url));
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return (
+      <div className="font-bold text-xl text-rose-500 text-center my-40">
+        error.message;
+      </div>
+    );
   }
-
+  {
+  }
   const filteredJobs = data?.filter((item) => {
     const { role, level, languages, tools } = item;
     //compare filters array with new constructed

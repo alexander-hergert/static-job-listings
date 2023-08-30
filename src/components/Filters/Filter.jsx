@@ -12,7 +12,7 @@ const Filter = ({ item }) => {
   };
 
   return (
-    <div className="flex mr-4 mb-2">
+    <div className="flex mr-4 mb-4">
       <h3
         ref={filter}
         className="bg-neutral-filter-tablets text-primary p-1.5 pb-1 
@@ -25,7 +25,7 @@ const Filter = ({ item }) => {
         className="bg-primary text-white p-1.5 px-2 pb-1 
         rounded-r-md hover:bg-neutral-very-dark"
       >
-        X
+        <img src="images/icon-remove.svg" alt={`icon-remove-${item}`} />
       </button>
     </div>
   );

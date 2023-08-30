@@ -13,7 +13,7 @@ const Filters = () => {
     filters.length > 0 && (
       <section
         className="flex justify-between shadow-lg bg-white w-10/12 
-      m-auto relative bottom-10 rounded-lg items-center px-5 pt-2 md:w-8/12"
+      m-auto relative bottom-6 rounded-lg items-center px-5 pt-6 pb-2 md:w-8/12"
       >
         <div className="flex flex-wrap">
           {filters.map((item) => (

@@ -35,8 +35,8 @@ test("should call setFilters when 'X' button is clicked", () => {
 
   render(<Filter item="Filter1" />);
 
-  // Click on the 'X' button
-  fireEvent.click(screen.getByText("X"));
+  // Click on the remove image button
+  fireEvent.click(screen.getByAltText("icon-remove-Filter1"));
 
   // Check if setFilters was called with the updated filters
   expect(mockContext.setFilters).toHaveBeenCalledWith(["Filter2"]);
@@ -54,9 +54,9 @@ test("should remove the filter from the DOM when 'X' button is clicked", () => {
 
   render(<Filter item="Filter1" />);
 
-  // Click on the 'X' button
-  const xButton = screen.getByText("X");
-  fireEvent.click(xButton);
+  // Click on the remove image button
+  const removeImg = screen.getByAltText("icon-remove-Filter1");
+  fireEvent.click(removeImg);
 
   // Use waitFor to wait for the element to be removed from the DOM
   waitFor(() => {
